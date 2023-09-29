@@ -269,6 +269,11 @@
             </div>
         </header>
         <!--header end-->
+
+
+        <x-sidebar />
+
+
         <!--sidebar start-->
         <aside>
             <div id="sidebar" class="nav-collapse ">
@@ -361,6 +366,9 @@
             </div>
         </aside>
         <!--sidebar end-->
+
+
+
         <!--main content start-->
         <section id="main-content">
             <section class="wrapper">
