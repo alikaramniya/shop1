@@ -7,16 +7,16 @@
     <meta name="author" content="Mosaddek">
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.html">
-    <title>Blank</title>
+    <title>{{ $title ?? 'صفحه اصلی' }}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-reset.css') }}" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="{{ asset('assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style-responsive.css') }}" rel="stylesheet" />
 </head>
 
 <body>
@@ -365,7 +365,7 @@
         <section id="main-content">
             <section class="wrapper">
                 <!-- page start-->
-                Page content goes here
+                {{ $slot }}
              
                 <!-- page end-->
             </section>
@@ -374,14 +374,14 @@
     </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.nicescroll.js') }}" type="text/javascript"></script>
 
 
     <!--common script for all pages-->
-    <script src="js/common-scripts.js"></script>
+    <script src="{{ asset('js/common-scripts.js') }}"></script>
 
 
 </body>
