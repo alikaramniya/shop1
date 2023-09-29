@@ -270,7 +270,6 @@
         </header>
         <!--header end-->
 
-
         <x-sidebar />
 
 

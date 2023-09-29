@@ -4,13 +4,13 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
             <li class="active">
-                <a class="" href="{{ url('/') }}">
+                <a class="" href="{{ route('home') }}">
                     <i class="icon-dashboard"></i>
                     <span>صفحه اصلی</span>
                 </a>
             </li>
             <x-sidebar-item title="محصولات" subTitles='{
-                     "index.html" : "item1", 
+                     {{ route("home") }} : "item1", 
                      "index2.html" : "item2", 
                      "index3.html" : "item3"
                 }' />
