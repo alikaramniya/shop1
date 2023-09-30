@@ -1,31 +1,18 @@
 @props([
-    'icon' => 'icon-tasks',
-    'title',
-    'sub' => 1,
-    'subTitles' => '{}' 
+'icon' => 'icon-tasks',
+'title',
+'sub' => 1,
+'subTitles' => ''
 ])
 <li class="sub-menu">
     @php
-
-        $arraySubTitles = str($subTitles)->replace('{', '')->replace('}', '')->explode(',');
+        $arraySubTitles = explode(',', $subTitles);
 
         foreach($arraySubTitles as $items) {
-            $count = strpos(strrev(trim($items)), ':');
-            $newStr = substr(strrev(trim($items)), $count+1);
-            $str = strrev(trim($newStr));
-            $str2 = substr(strrev(trim($items)), 0, $count);
-            $str3 = strrev(trim($str2));
+            $key = (string)str($items)->reverse()->after(':')->reverse();
 
-            if (!str_contains($str, '"')) {
-                $str = '"' . $str . '"';
-            }
-
-            $array[$str] = $str3;
+            $arr[$key] = (string)str($items)->reverse()->before(':')->reverse();
         }
-
-        $newSubTitles = json_encode($array);
-        
-
     @endphp
 
     <a href="#" class="">
@@ -35,8 +22,11 @@
     </a>
     @if (!!$sub)
         <ul class="sub">
-            @foreach (json_decode($newSubTitles, true) as $address => $title)
-                <li><a class="" href="{{ $address }}">{{ $title }}</a></li>
+            @foreach ($arr as $address => $title)
+            <li>
+                <a style="padding-right:5px" href="{{ $address }}">
+                    {{ $title }}</a>
+            </li>
             @endforeach
         </ul>
     @endif
