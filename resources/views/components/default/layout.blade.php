@@ -79,7 +79,13 @@
                      <a href="fashion.html">Fashion</a>
                      <a href="electronic.html">Electronic</a>
                      <a href="jewellery.html">Jewellery</a>
-                     <a href="#">Login / Register</a>
+                     @if (Route::has('login'))
+                        
+                        <span href="#" style="display: flex;">
+                           <a href="{{ route('login') }}">Login</a>
+                           <a href="{{ route('register') }}">Register</a>
+                        </span>
+                     @endif
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="{{ asset('default/images/toggle-icon.png') }}"></span>
                   <div class="dropdown">

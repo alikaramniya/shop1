@@ -1,6 +1,6 @@
 <x-default.layout>
 
-   <x-slot:title>
+   <x-slot name="title">
       صفحه اصلی
       </x-slot>
 
