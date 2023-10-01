@@ -9,10 +9,7 @@
                     <span>صفحه اصلی</span>
                 </a>
             </li>
-            <x-sidebar-item title="محصولات" subTitles='
-                    {{ route("say.hello") }}:لیست محصولات,
-                    {{ route("home") }}:افزودن
-                '/>
+            <x-sidebar-item title="محصولات" subTitles='{{ route("home") }}:افزودن'/>
         </ul>
         <!-- sidebar menu end-->
     </div>
