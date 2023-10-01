@@ -1,5 +1,6 @@
-<x-layout>
+<x-default.layout>
+
     <h3>
-        به پنل مدیریت خوش آمدید 
+        welcome to panel admin
     </h3>
-</x-layout>
+</x-default.layout>
