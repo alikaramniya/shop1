@@ -88,7 +88,9 @@
                      @guest
                         <span href="#" style="display: flex;">
                            <a href="{{ route('login') }}">Login</a>
-                           <a href="{{ route('register') }}">Register</a>
+                           @if (Route::has('register'))
+                              <a href="{{ route('register') }}">Register</a>
+                           @endif
                         </span>
                      @endguest
                   @endif
